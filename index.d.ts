@@ -1,4 +1,4 @@
-/**
+/*
 * @license Apache-2.0
 *
 * Copyright (c) 2026 The Stdlib Authors.
@@ -16,27 +16,32 @@
 * limitations under the License.
 */
 
-'use strict';
+// TypeScript Version: 4.1
+
+/// <reference types="https://cdn.jsdelivr.net/gh/stdlib-js/types@esm/index.d.ts"/>
+
+import { NumericArray, Collection, AccessorArrayLike } from '@stdlib/types/array';
 
 /**
-* Compute the range of absolute values of an array.
+* Input array.
+*/
+type InputArray = NumericArray | Collection<number> | AccessorArrayLike<number>;
+
+/**
+* Computes the range of absolute values of an array.
 *
-* @module @stdlib/stats-array-rangeabs
+* @param x - input array
+* @returns range
 *
 * @example
-* var rangeabs = require( '@stdlib/stats-array-rangeabs' );
-*
 * var x = [ 1.0, -2.0, 2.0 ];
 *
 * var v = rangeabs( x );
 * // returns 1.0
 */
-
-// MODULES //
-
-var main = require( './main.js' );
+declare function rangeabs( x: InputArray ): number;
 
 
 // EXPORTS //
 
-module.exports = main;
+export = rangeabs;
